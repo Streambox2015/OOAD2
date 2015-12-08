@@ -1,0 +1,83 @@
+<b>Use Case ID:</b> 1</br>
+<b>Use Case Title:</b> Register Member</b>
+</br>
+<b>Primary Actor:</b> Prospective member</br>
+<b>Goal in Context:</b> The prospective member registers themselves as a member with the system.</br>
+<b>Scope:</b> Personal use of system</br></br>
+<b>Stakeholders and Interests:</b></br>
+<b>Prospective member:</b> Wants to register themselves with the system and use its features of playing and streaming music.</br>
+<b>Provider:</b> Wants to provide the prospective member access to their system so that they can play and stream music tracks.</br></br>
+
+<b>Minimal Guarantees:</b> The prospective member will have their own unique username and password and will be registered with the system. The prospective member will be able to log in and out of the system any time they wish.</br>
+<b>Success Guarantees:</b> The prospective member will have access to any features the system has to offer.</br></br>
+<b>Trigger:</b> The prospective member clicks the "Register" link on the top right hand side corner of the system's login page</b></br>
+</br>
+<b>Main Success Scenario</b></br>
+<b>1. Prospective member:</b> The prospective member invokes the registration function</b></br>
+<b>2. System: </b> The system opens a blank member registration form</br>
+<b>3. Prosepctive member: </b> The prospective member fills in all the required credentials correctly (see Glossary) and clicks the confirmation button</br>
+<b>4. System: </b> The system checks if the data that has been entered into the form's mandatory fields is valid.</br>
+<b>5. System: </b> The system displays a summary of the data that has been input and prompts the user to verify if it is in fact the data they want entered.</br>
+<b>6. Prospective Member:</b> The prospective member is satisfied that the summary contains the correct details and confirms it with the system.</b></br>
+<b>7. System:</b> The system records the prospectives member's details and logs them into the system.</br>
+<b>8. System:</b> The system directs the new member to the systems home page.</br>
+
+
+
+<br>
+<b>Alternatives</b></br>
+<b>1a.</b> The member is already registered with the system. The member logs into the system with their username and password. </br>
+<b>1b.</b> The member is already registered with the system, but wants to make another account with different details.</br>
+<b>1c.</b> The member is already registered with the system, but wants to make another account with different details. However, the member has already registered three different accounts while using the same ip address.</br>
+<b>3a.</b> The prospective member enters invalid data into the mandatory fields. The system prompts the prospective member to enter valid data where it is necessary (this includes unique usernames, emails and phone numbers that have already been registered in the system).</br>
+<b>6a.</b> The prospective member is not satisfied with one of the details shown by the system in the revision summary. The prospective member decides to change the detail before reconfirming with the system.</br></br>
+
+
+<b>Technology and Data Variations List:</b> None</b></br>
+<b>Priority:</b> Immediate</br>
+<b>Releases:</b> Several</br>
+<b>Response Time:</b>  Immediate</br>
+<b>Frequency of Use:</b> Three times with each ip address.</br>
+<b>Channel to Primary Actor:</b> Java Application</br>
+<b>Channels to Secondary Actors:</b> None</br>
+<b>Open Issues</b> The prospective member could register themselves with the system as many times as they as wish as long as they provide different ip addresses and registration details each time. Their are few methods to prevent bogus or harmful accounts being created.</br>
+</br></br>
+
+<b>Glossary: </b></br></br>
+
+<b>Member details:</b></br>
+Username</br>
+Forename</br>
+Surname</br>
+Email</br>
+Password</br>
+
+
+<!---POST CONDITIONS !--->
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</br></br>
+
+<b>Use Case ID:</b> 2 </br>
+<b>Use Case Title:</b> Create Playlist </br></br>
+The member prompts the "Create Playlist" menu item found in the "File" menu. The system prompts the member to enter the name of the playlist. </br>
+Now that an empty Playlist has been created the member can choose to populate it with tracks. 
+If so the member will search for the track they wish to add using the "Search for Track" use case and right clicking on the 
+track and then choosing "Add to Playlist". The track can only be added if it has been purchased.</br> The system will display a list of playlists, prompting the member to 
+click on the playlist they want the track to be added to.</br>
+</br>
+At any time the member can rename the playlist, add or remove tracks from that playlist, or even delete it.
+The member can repeat theses proccesses indefintely.</br>
+</br></br>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</br></br>
+
+<b>Use Case ID:</b> 3 </br>
+<b>Use Case Title:</b> Search for Track </br>
+The member types in the name of the track they wish to play inside the specified textbox. 
+The system checks if the track is available from the database. The system verifies that if the track is available.
+If it is available the button for the song will appear in the search result. It will also specify its price.
+Double clicking on the track will prompt the "Play Music" member case.
+
+
+</body>
+</html>
