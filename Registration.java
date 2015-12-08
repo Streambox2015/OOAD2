@@ -1,28 +1,46 @@
-package Streambox;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+import java.sql.Time;
 
 /**
- * Created by t00058011 on 07/12/2015.
+ *
+ * @author t00134621
  */
-public class Registration extends Member {
-    private long registrationTime;
-
-    public Registration(String Username, String Forename, String Surname, String Email, String Password, long registrationTime) {
-        super(Username, Forename, Surname, Email, Password);
-        setRegistrationTime(registrationTime);
+public class Registration {
+    
+    private long time;
+    
+    public Registration(){
+        
+        this(0);
+       
+            
     }
-
-
-    public void setRegistrationTime(long registrationTime) {
-        this.registrationTime = registrationTime;
+    
+    
+    public Registration(long time){
+        
+        this.time = time;
+       
+            
     }
-
-
-    public long getRegistrationTime(){
-        return registrationTime;
+    
+    
+    
+    public long getTime(){
+        
+        return System.currentTimeMillis();
     }
-
-
+    
+    
     public String toString(){
-        return super.toString()+"\nTime registered...."+getRegistrationTime();
+        
+        return "\nThe time of creation is "+ getTime();
     }
+    
 }
