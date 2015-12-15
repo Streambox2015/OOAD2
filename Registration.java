@@ -1,4 +1,4 @@
-package ooadStreamboxIteration2;
+package ooadStreamboxIteration3;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -9,23 +9,28 @@ import java.util.Date;
 
 public class Registration {
     private Date date;
-    private static int registrationID = 0;
+    public static int nextRegistrationID = 0;// change back to private
+    private int registrationID;
     private Member member;
 
     public Registration(Date date,Member member) {
         this.date = date;
         this.member = member;
-        registrationID++;
+        nextRegistrationID++;
+        registrationID = nextRegistrationID;
     }
 
     public Date getDate() {
-        Calendar c = Calendar.getInstance();
-        date = c.getTime();
+        Calendar dateAndTime = Calendar.getInstance();
+        date = dateAndTime.getTime();
         return date;
     }
 
     @Override
     public String toString() {
-        return "Time and Date of Member Registration is " + getDate()+"\n RegistrationNumber::...." + registrationID +"\n"+ member.toString();
+        return "Time and Date of Member Registration is " + getDate()
+                +"\n Registration Number::...."
+                + registrationID +"\n"
+                + member.toString();
     }
 }

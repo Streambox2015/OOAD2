@@ -1,10 +1,9 @@
-package ooadStreamboxIteration2;
+package ooadStreamboxIteration3;
 
 /**
  * Created by Colin on 12/12/2015.
  */
 public class AccountType {
-
     private boolean fullAccessToAllFeatures;
     private boolean restrictedAccessToAllFeatures;
     private boolean partialAccessToAllFeatures;

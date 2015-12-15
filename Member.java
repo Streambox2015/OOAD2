@@ -1,18 +1,16 @@
-package ooadStreamboxIteration2;
+package ooadStreamboxIteration3;
 
 /**
  * Created by Colin on 11/12/2015.
  */
-public class Member {
+public class Member  {
     private String username;
     private String passwordHash;
     private String forename;
     private String surname;
     private String email;
-    // private Registration registration;
 
     AccountType accountType;
-
 
     public Member(String username, String passwordHash, String forename, String surname, String email, AccountType accountType) {
         this.username = username;
