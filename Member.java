@@ -1,4 +1,4 @@
-package ooadStreamboxIteration1;
+package ooadStreamboxIteration2;
 
 /**
  * Created by Colin on 11/12/2015.
@@ -9,13 +9,18 @@ public class Member {
     private String forename;
     private String surname;
     private String email;
+    // private Registration registration;
 
-    public Member(String username, String passwordHash, String forename, String surname, String email) {
+    AccountType accountType;
+
+
+    public Member(String username, String passwordHash, String forename, String surname, String email, AccountType accountType) {
         this.username = username;
         this.passwordHash = passwordHash;
         this.forename = forename;
         this.surname = surname;
         this.email = email;
+        this.accountType = accountType;
 
     }
 
@@ -27,6 +32,7 @@ public class Member {
     public String getPasswordHash() {
         return passwordHash;
     }
+
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
     }
@@ -43,6 +49,7 @@ public class Member {
         return email;
     }
 
+
     @Override
     public String toString() {
         return "Member{" +
@@ -51,6 +58,9 @@ public class Member {
                 ", forename='" + forename + '\'' +
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
+                ", accountType=" + accountType +
                 '}';
+
+
     }
 }
