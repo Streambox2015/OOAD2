@@ -1,76 +1,56 @@
+package ooadStreamboxIteration1;
 
-
-
+/**
+ * Created by Colin on 11/12/2015.
+ */
 public class Member {
+    private String username;
+    private String passwordHash;
+    private String forename;
+    private String surname;
+    private String email;
 
-	private String memberUserName;
-	private String memberForeName;
-	private String memberSurName;
-	private String memberEmail;
-	private String memberPassWord;
-        
-        Registration registration;
-	
-	
-	
-	
-	
-	public Member(String memberUserName,String memberForeName, String memberSurName, String memberEmail, String memberPassWord,Registration registration) {
-		
-		this.memberUserName = memberUserName;
-                this.memberForeName = memberForeName;
-                this.memberSurName = memberSurName;
-                this.memberEmail = memberEmail;
-		setMemberPassWord(memberPassWord);
-                this.registration = registration;
-		
-		
-		
-		// TODO Auto-generated constructor stub
-	}
+    public Member(String username, String passwordHash, String forename, String surname, String email) {
+        this.username = username;
+        this.passwordHash = passwordHash;
+        this.forename = forename;
+        this.surname = surname;
+        this.email = email;
 
+    }
 
-	public String getMemberUserName() {
-		return memberUserName;
-	}
+    public String getUsername() {
 
+        return username;
+    }
 
-	public String getMemberForeName() {
-		return memberForeName;
-	}
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
 
+    public String getForename() {
+        return forename;
+    }
 
-	
+    public String getSurname() {
+        return surname;
+    }
 
+    public String getEmail() {
+        return email;
+    }
 
-	public String getMemberSurName() {
-		return memberSurName;
-	}
-	
-	
-
-        
-        public String getMemberEmail() {
-		return memberEmail;
-	}
-
-
-	
-
-	public String getMemberPassWord() {
-		return memberPassWord;
-	}
-
-
-	public void setMemberPassWord(String memberPassWord) {
-		this.memberPassWord = memberPassWord;
-	}
-	
-	
-	
-	public String toString(){
-		
-            return "UserName...."+getMemberUserName()+"\nForeName...."+getMemberForeName()+"\nSurName...."+getMemberSurName()+"\nPassWord...."+getMemberPassWord()+"\nEmail...."+getMemberEmail()+"\n...."+registration;                        
-	}
-
+    @Override
+    public String toString() {
+        return "Member{" +
+                "username='" + username + '\'' +
+                ", passwordHash='" + passwordHash + '\'' +
+                ", forename='" + forename + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

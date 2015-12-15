@@ -1,46 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package ooadStreamboxIteration1;
 
-
-import java.sql.Time;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
- *
- * @author t00134621
+ * Created by Colin on 11/12/2015.
  */
+
 public class Registration {
-    
-    private long time;
-    
-    public Registration(){
-        
-        this(0);
-       
-            
+    private Date date;
+    private static int registrationID = 0;
+    private Member member;
+
+    public Registration(Date date,Member member) {
+        this.date = date;
+        this.member = member;
+        registrationID++;
     }
-    
-    
-    public Registration(long time){
-        
-        this.time = time;
-       
-            
+
+    public Date getDate() {
+        Calendar c = Calendar.getInstance();
+        date = c.getTime();
+        return date;
     }
-    
-    
-    
-    public long getTime(){
-        
-        return System.currentTimeMillis();
+
+    @Override
+    public String toString() {
+        return "Time and Date of Member Registration is " + getDate()+"\n RegistrationNumber::...." + registrationID +"\n"+ member.toString();
     }
-    
-    
-    public String toString(){
-        
-        return "\nThe time of creation is "+ getTime();
-    }
-    
 }
